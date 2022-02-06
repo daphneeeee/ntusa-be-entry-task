@@ -24,8 +24,8 @@
         ```
     - Copy files
       ```
-      copy .env.example .env
-      copy docker-compose.yaml.example docker-compose.yaml
+      cp .env.example .env
+      cp docker-compose.yaml.example docker-compose.yaml
       ```
 
 3. Install docker
