@@ -48,7 +48,7 @@ def delete_post(db: Session, post_id: int) -> None:
     db.commit()
 
 
-def add_comment(db: Session, post_id: int, author: str, content: str, time: datetime) -> schema.Comment:
+def add_comment(db: Session, post_id: int, author: str, content: str, time: datetime) -> int:
     if not db.query(models.Post).filter(models.Post.id == post_id).first():
         raise HTTPException(status_code=404, detail="Post not found")
 
